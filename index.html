@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organiza+ | Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-check-circle"></i> Organiza+</h1>
+      <p class="subtitle">Organize suas tarefas de forma simples e eficiente</p>
+    </header>
+
+    <section class="form-section">
+      <form id="form-tarefa">
+        <div class="input-group">
+          <input 
+            type="text" 
+            id="titulo-tarefa" 
+            placeholder="Digite o título da tarefa..." 
+            autocomplete="off"
+            maxlength="100"
+          >
+          <button type="submit" id="btn-adicionar">
+            <i class="fas fa-plus"></i> Adicionar
+          </button>
+        </div>
+        <p id="mensagem-erro" class="mensagem-erro hidden">Por favor, informe o título da tarefa.</p>
+      </form>
+    </section>
+
+    <section class="contador-section">
+      <div class="contador">
+        <span id="total-tarefas">0</span> tarefas · 
+        <span id="tarefas-pendentes">0</span> pendentes · 
+        <span id="tarefas-concluidas">0</span> concluídas
+      </div>
+    </section>
+
+    <section class="lista-section">
+      <ul id="lista-tarefas">
+        <!-- Tarefas serão renderizadas aqui -->
+      </ul>
+      <p id="mensagem-vazia" class="mensagem-vazia">Nenhuma tarefa cadastrada.</p>
+    </section>
+
+    <footer>
+      <p>Desenvolvido para a Avaliação Final — Lógica de Programação</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
